@@ -22,13 +22,13 @@ pipeline {
 
         stage('Pull Docker Image') {
             steps {
-                sh 'docker pull sgadwe/gorestdatadriventest:1.0'
+                bat 'docker pull sgadwe/gorestdatadriventest:1.0'
             }
         }
 
         stage('Run API Test Cases') {
             steps {
-                sh 'docker run -v $(pwd)/newman:/app/results sgadwe/gorestdatadriventest:1.0'
+                bat 'docker run -v $(pwd)/newman:/app/results sgadwe/gorestdatadriventest:1.0'
             }
         }
 
