@@ -1,0 +1,29 @@
+[
+	{
+		"name" : "sonu",
+		"city" : "Nagpur"
+	},
+	{
+		"name" : "sandesh",
+		"city" : "Banglore",
+		"designation": "SDET"	
+	},
+	{
+		"name" : "shilpa",
+		"city" : "Pune",
+		"language": [
+			"java,javascript"
+		]
+	},
+	{
+		"firstname":"Revathy",
+		"lastname":"ASG",
+		"totalPrice": 111,
+		"depositepaid": true
+	},
+	{
+		"firstname": "ashu",
+		"totalAmount": 112,
+		"additionalNeeds": "Breakfast"
+	}
+]

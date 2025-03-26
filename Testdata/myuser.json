@@ -1,0 +1,19 @@
+[	
+	{
+		"name":"sonu",
+		"gender":"female",
+		"status":"active"
+	},
+		
+	{
+		"name":"kanta",
+		"gender":"female",
+		"status":"active"
+	},
+		
+	{
+		"name":"pradip",
+		"gender":"male",
+		"status":"inactive"	
+	}
+]
