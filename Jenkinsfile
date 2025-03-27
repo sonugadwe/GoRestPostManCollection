@@ -20,7 +20,7 @@ pipeline {
             parallel {
                 stage('Pull GoRest Image') {
                     steps {
-                        bat 'docker pull sgadwe/gorestdatadriventest:1.0'
+                        bat 'docker pull sgadwe/ddtest:1.0'
                     }
                 }
                 stage('Pull Booking Image') {
@@ -31,22 +31,18 @@ pipeline {
             }
         }
 
-        stage('Prepare Newman Results Directory') {
-            steps {
-                bat 'mkdir -p $(pwd)/newman' 
-            }
-        }
+       
 
         stage('Run API Test Cases in Parallel') {
             parallel {
                 stage('Run GoRest Tests') {
                     steps {
-                        bat 'docker run --rm -v %cd%/newman:/app/results sgadwe/gorestdatadriventest:1.0'
+                        bat 'docker run --rm -v %cd%\\newman:/app/results sgadwe/ddtest:1.0'
                     }
                 }
                 stage('Run Booking Tests') {
                     steps {
-                        bat 'docker run --rm -v %cd%/newman:/app/results sgadwe/mybookingapi:1.0'
+                        bat 'docker run --rm -v %cd%\\newman:/app/results sgadwe/mybookingapi:1.0'
                     }
                 }
             }
