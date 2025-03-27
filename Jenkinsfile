@@ -20,15 +20,11 @@ pipeline {
             }
         }
 
-        stage('Pull Docker Image') {
-            steps {
-                bat 'docker pull sgadwe/gorestdatadriventest:1.0'
-            }
-        }
+      
 
         stage('Run API Test Cases') {
             steps {
-                bat 'docker run -v %cd%/newman:/app/results sgadwe/gorestdatadriventest:1.0'
+                bat 'docker run -v %cd%\\newman:/app/results sgadwe/ddtest:1.0'
             }
         }
 
